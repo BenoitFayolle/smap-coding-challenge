@@ -1,1 +1,7 @@
+python packages:
 Django==1.11
+Plotly==2.6.0
+pandas==0.23.0
+
+django app:
+django-tables2==1.21.2
