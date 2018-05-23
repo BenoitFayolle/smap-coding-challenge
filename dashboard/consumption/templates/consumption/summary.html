@@ -1,7 +1,16 @@
-{% extends 'consumption/layout.html' %}
-
-{% block content %}
-
-<h1>{{message}}</h1>
-
-{% endblock %}
+{% load render_table from django_tables2 %}
+<div style="width: 100%; overflow: hidden;">
+	<div style="width: 800; float: left;"> 
+		<h3>Average consumption of each user over a half-hour (Wh)</h3>
+		<div style="width:800;height:300">
+			{{ ave_cons_html|safe }}
+		</div>
+		<h3>Total consumption for each user (Wh)</h3>
+		<div style="width:800;height:300">
+			{{ tot_cons_html|safe }}
+		</div>
+	</div>
+	<div style="margin-left: 820;"> 
+		{% render_table user_table %} 
+	</div>
+</div>

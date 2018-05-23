@@ -1,5 +1,13 @@
-{% extends 'consumption/layout.html' %}
+<h1>User {% for u in user %} {{ u.user_id }} {% endfor %} consumption time series</h1>
+<div style="width:900;height:500">
+{{ html|safe }}
+</div>
 
-{% block content %}
-
-{% endblock %}
+<ul>
+	{% for u in user %}
+    <li> area : {{ u.area }}</li>
+    <li> tariff : {{ u.tariff }}</li>
+    <li> average consumption : {{ u.mean_consumption }} Wh per half-hour</li>
+    <li> total consumption : {{ u.total_consumption }} Wh </li>
+    {% endfor %}
+</ul>
