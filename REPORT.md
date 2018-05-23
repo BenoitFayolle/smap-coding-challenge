@@ -1,6 +1,7 @@
 ## Documentation
 
 * Check required packages in requirements.txt
+* Execute migration commands "python manage.py makemigrations" and "python manage.py migrate" to create the database.
 * use the command "python manage.py import <path_to_data_folder>" to import your data in the application database. The data folder should contain:
 	* a user_data.csv file 
 
